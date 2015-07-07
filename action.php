@@ -1,3 +1,17 @@
+<?php
+
+/**
+ * 右辺と左辺を足す
+ *
+ * @param int $left_side  右辺
+ * @param int $right_side 左辺
+ * @return int 計算結果
+ */
+function add($left_side, $right_side) {
+    return $left_side + $right_side;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,12 +20,13 @@
 </head>
 <body>
     <p>
-        input:
         <?php if (!is_numeric($_GET['left_side']) or !is_numeric($_GET['right_side'])) : ?>
-        <?php var_dump($_GET['right_side']) ?>
             <span style="color: red;">数値が入力されていません</span>
         <?php else : ?>
-            <span><?php echo htmlspecialchars($_GET['left_side'] + $_GET['right_side']); ?></span>
+        <?php echo $_GET['left_side'] ?> +
+        <?php echo $_GET['right_side'] ?> =
+        <?php $result = add($_GET['left_side'], $_GET['right_side']); ?>
+            <span><?php echo htmlspecialchars($result); ?></span>
         <?php endif ?>
     </p>
 
