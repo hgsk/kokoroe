@@ -5,6 +5,9 @@
     <title>kokoroe</title>
 </head>
 <body>
-    <?php echo 'hello' ?>
+    <form action="/action.php" method="GET">
+        <input type="text" name="input">
+        <input type="submit" />
+    </form>
 </body>
 </html>
