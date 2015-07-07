@@ -8,10 +8,10 @@
     <p>
         input:
         <?php if (!is_numeric($_GET['left_side']) or !is_numeric($_GET['right_side'])) : ?>
-        <?php var_dump($_GET['right_side']) ?>
             <span style="color: red;">数値が入力されていません</span>
         <?php else : ?>
-            <span><?php echo htmlspecialchars($_GET['left_side'] + $_GET['right_side']); ?></span>
+        <?php $result = $_GET['left_side'] + $_GET['right_side'] ?>
+            <span><?php echo htmlspecialchars($result); ?></span>
         <?php endif ?>
     </p>
 
