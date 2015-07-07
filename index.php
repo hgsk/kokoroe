@@ -5,6 +5,6 @@
     <title>kokoroe</title>
 </head>
 <body>
-    hello
+    <?php echo 'hello' ?>
 </body>
 </html>
