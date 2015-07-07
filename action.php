@@ -7,9 +7,9 @@
 <body>
     <p>
         input:
-        <?php if ('' == $_GET['left_side'] or '' == $_GET['right_side']) : ?>
+        <?php if (!is_numeric($_GET['left_side']) or !is_numeric($_GET['right_side'])) : ?>
         <?php var_dump($_GET['right_side']) ?>
-            <span style="color: red;">文字列が入力されていません</span>
+            <span style="color: red;">数値が入力されていません</span>
         <?php else : ?>
             <span><?php echo htmlspecialchars($_GET['left_side'] + $_GET['right_side']); ?></span>
         <?php endif ?>
